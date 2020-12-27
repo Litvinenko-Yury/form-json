@@ -194,16 +194,19 @@ body {
 /*==================*/
 /*.buy-counter*/
 .counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
   margin-bottom: 12px;
   font-size: 1.75rem;
   font-family: "Bebas Neue", "Arial", sans-serif;
 }
 
 .counter__text {
+  display: inline-block;
+  width: 50%;
   margin-right: 0px;
+  text-align: right;
   color: #777777;
   letter-spacing: 1px;
 }
@@ -215,8 +218,9 @@ body {
 }
 
 .counter__sup {
-  font-size: 0.7em;
-  vertical-align: middle;
+  font-size: 0.6em;
+  margin-top: -5px;
+  color: #3388a8;
 }
 
 /*==================*/
