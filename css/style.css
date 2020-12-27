@@ -235,7 +235,7 @@ body {
 
 /*==================*/
 /*.btn*/
-.btn-wrap {
+.field-actions {
   display: flex;
   justify-content: center;
   margin-bottom: 48px;
@@ -265,6 +265,7 @@ body {
   border-radius: 30px;
   border: 0;
   cursor: pointer;
+  outline: none;
 }
 
 /***************/
