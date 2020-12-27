@@ -177,7 +177,7 @@ body {
 .select {
   padding: 5px 15px 5px 5px;
   border: 2px solid #8bade4;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   font-family: "Open Sans", Arial, sans-serif;
@@ -194,7 +194,6 @@ body {
 /*==================*/
 /*.buy-counter*/
 .counter {
-  outline: 1px dotted cadetblue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,8 +222,6 @@ body {
 /*==================*/
 /*.btn*/
 .btn-wrap {
-  outline: 1px dotted saddlebrown;
-
   display: flex;
   justify-content: center;
   margin-bottom: 48px;
@@ -321,8 +318,6 @@ body {
 /*==================*/
 /*.info*/
 .info {
-  outline: 1px dotted violet;
-
   display: block;
   margin: 0 auto;
   text-align: center;
