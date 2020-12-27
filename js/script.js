@@ -1,6 +1,5 @@
 'use strict';
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const radioWrapper = document.querySelector('#radio'),
     labelInput = radioWrapper.querySelectorAll('.field-radio__input'),

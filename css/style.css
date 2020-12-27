@@ -37,6 +37,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -46,6 +47,14 @@ body {
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form {
   width: 590px;
   padding: 17px;
   border: 13px solid #ebebeb;
