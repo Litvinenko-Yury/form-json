@@ -1,15 +1,18 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const radioWrapper = document.querySelector('#radio'),
-    labelInput = radioWrapper.querySelectorAll('.field-radio__input'),
-    select = document.querySelector('#select');
+  const form = document.querySelector('#form'),
+    radioWrapper = form.querySelector('#radio'),
+    inputs = radioWrapper.querySelectorAll('.field-radio__input'),
+    select = form.querySelector('#select'),
+    sumTotalText = form.querySelector('#sum'),
+    numText = form.querySelector('#num');
 
   calcTotal(); // старт функции после загрузки страницы
 
   /*функция, считает TOTAL: sum*/
   function calcTotal() {
-    labelInput.forEach((item, i) => {
+    inputs.forEach((item, i) => {
       if (item.checked) {
         let sum = item.value * select.value,
           num = i + 1;
@@ -22,12 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /*функция, устанавливает на страницу значение TOTAL: sum*/
   function setTotalSum(a) {
-    document.querySelector('#sum').textContent = `$${a}`;
+    sumTotalText.textContent = `$${a}`;
   }
 
   /*функция, устанавливает на страницу значение Selected plan: #*/
   function setInfoText(a) {
-    document.querySelector('#num').textContent = `${a}`;
+    numText.textContent = `${a}`;
   }
 
   /*=====================*/
