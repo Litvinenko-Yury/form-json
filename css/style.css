@@ -219,7 +219,7 @@ body {
 
 .counter__sup {
   font-size: 0.6em;
-  margin-top: -5px;
+  /*margin-top: -5px;*/
   color: #3388a8;
 }
 
@@ -327,5 +327,15 @@ body {
   text-align: center;
   font-size: 1.1rem;
   color: #3388a8;
-  letter-spacing: 1px;
+}
+
+.info__text {
+  display: inline-block;
+  margin-left: 5px;
+  letter-spacing: 1.1px;
+}
+
+.info__num {
+  display: inline-block;
+  margin-left: -2px;
 }
