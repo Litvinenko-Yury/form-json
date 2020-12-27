@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Bebas Neue Regular"), local("Bebas-neue-Regular"),
+    url("../fonts/bebas-neue-v2-latin-regular.woff2") format("woff2"),
+    url("../fonts/bebas-neue-v2-latin-regular.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 590px;
+  padding: 17px;
+  border: 13px solid #ebebeb;
+  background-color: #f8f8f8;
+}
+
+.field-radio {
+  margin: 0;
+  margin-bottom: 7px;
+  padding: 0;
+  list-style: none;
+}
+
+/*===стилизация radio===*/
+.field-radio__label {
+  /*подготовка места для кастом-radio = стилизация label*/
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.field-radio__label:hover {
+  background-color: #ebf4f7;
+  border: 1px solid #b8d7e2;
+}
+
+.field-radio__input {
+  /*прячем стандартный radio без потери доступности*/
+  position: absolute;
+  opacity: 0;
+  margin: 0;
+}
+
+.field-radio__name-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 15px 19px 75px;
+}
+
+.field-radio__name-text::before {
+  /*стилизация фона radio*/
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 23px;
+  height: 23px;
+  border: 5px solid #dadada;
+  border-radius: 50%;
+}
+
+.field-radio__name-text:hover::before {
+  border-color: #34648e;
+  /*opacity: 1;*/
+  transition: border-color 0.3s;
+}
+
+.field-radio__name-text:active::before {
+  /*стилизация мометна клика*/
+  border-color: #244663;
+}
+
+.field-radio__name-text-inner {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 28px;
+  color: #787878;
+}
+
+.field-radio__name-text-inner--last {
+  font-family: "", Arial, sans-serif;
+  color: #787878;
+  letter-spacing: 1px;
+}
+
+/*переключение состояния radio*/
+.field-radio__name-text::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+}
+
+.field-radio__input:checked ~ .field-radio__name-text::after {
+  /*стилизация активного radio*/
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: 36px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border-radius: 50%;
+  background-color: #0294bf;
+
+  opacity: 1;
+  transition: opacity 0.25s;
+}
+
+.field-radio__input:checked ~ .field-radio__name-text::before {
+  /*стилизация активного radio*/
+  border-color: #34648e;
+}
+
+/*==================*/
+/*select*/
+.select-wrap {
+  display: flex;
+  align-items: center;
+  padding: 30px 30px 30px 32px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+
+.select-title {
+  margin-right: 3px;
+  padding-right: 3px;
+  width: 50%;
+  font-size: 0.9rem;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 600;
+  text-align: right;
+}
+
+.select {
+  padding: 5px 15px 5px 5px;
+  border: 2px solid #8bade4;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/*==================*/
+/*.buy*/
+.buy {
+  padding: 30px 100px 30px 100px;
+}
+
+/*==================*/
+/*.buy-counter*/
+.counter {
+  outline: 1px dotted cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+}
+
+.counter__text {
+  margin-right: 0px;
+  color: #777777;
+  letter-spacing: 1px;
+}
+
+.counter__sum {
+  margin-left: 5px;
+  color: #3388a8;
+  letter-spacing: 1px;
+}
+
+.counter__sup {
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+/*==================*/
+/*.btn*/
+.btn-wrap {
+  outline: 1px dotted saddlebrown;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.btn {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  min-height: 40px;
+  margin: 0;
+  padding: 15px 60px;
+  white-space: nowrap;
+  user-select: none;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.2em;
+  font-weight: 400;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #33a845;
+  background-image: none;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+}
+
+/***************/
+/*hover circle на .btn*/
+/*Принцип:
+по ховер на btn__hoverable применить анимацию к btn__anim*/
+.btn__anim {
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.btn__anim::before {
+  position: relative;
+  content: "";
+  display: block;
+  margin-top: 100%;
+}
+
+.btn__anim::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.btn__hoverable:hover > .btn__anim {
+  /*изменяем ширину .btn__anim*/
+  animation: anim-out 0.75s;
+}
+
+.btn__hoverable:hover > .btn__anim::after {
+  /*изменяем фон  .btn__anim::after*/
+  animation: anim-out-pseudo 0.75s;
+}
+
+@keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  100% {
+    background: transparent;
+  }
+}
+/***************/
+.btn:active {
+  background-color: #1e6429;
+}
+
+/*==================*/
+/*.info*/
+.info {
+  outline: 1px dotted violet;
+
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #3388a8;
+  letter-spacing: 1px;
+}
